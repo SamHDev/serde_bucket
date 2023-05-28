@@ -19,7 +19,7 @@ Under the hood, the `Bucket` type is a `vec` of 'nodes' that depict the type, it
 and other attributes. This makes it easier to work with and removes some of the
 heap allocation that you find with recursive data structures.
 
-This is a crate created for *my* projects, and as such is unlikely to be maintained.
+> This is a crate created for *my* projects, and as such is unlikely to be maintained.
 It might be worth saying *'bucket'* and use [`serde_value`] instead.
 
 [`Bucket`]: https://docs.rs/serde_bucket/0.1.1/serde_bucket/struct.Bucket.html
@@ -53,4 +53,4 @@ assert_eq!(value, Example { a: 10, b: false });
 
 
 #### Thanks
-> Merci Buckets for stopping by `<3`
+Merci Buckets for stopping by `<3` - here is [My Twitter](https://samh.dev/twitter) if you want to say hello
