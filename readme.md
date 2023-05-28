@@ -2,9 +2,9 @@
 
 'Buckets' for [Serde] Deserialisation
 
-[![crates.io badge](https://img.shields.io/crates/v/serde_bucket.svg?style=for-the-badge)](https://crates.io/crates/tycho)
-[![docs.rs badge](https://img.shields.io/docsrs/serde_bucket.svg?style=for-the-badge&color=blue)](https://docs.rs/tycho)
-[![Downloads badge](https://img.shields.io/crates/d/serde_bucket.svg?style=for-the-badge)](https://crates.io/crates/tycho)
+[![crates.io badge](https://img.shields.io/crates/v/serde_bucket.svg?style=for-the-badge)](https://crates.io/crates/serde_bucket)
+[![docs.rs badge](https://img.shields.io/docsrs/serde_bucket.svg?style=for-the-badge&color=blue)](https://docs.rs/serde_bucket)
+[![Downloads badge](https://img.shields.io/crates/d/serde_bucket.svg?style=for-the-badge)](https://crates.io/crates/serde_bucket)
 
 ---
 
