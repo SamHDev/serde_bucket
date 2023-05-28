@@ -9,6 +9,18 @@ use crate::node::BucketNode;
 /// A Serde Bucket.
 ///
 /// Stores Serde data model values for later deserialisation
+///
+/// `Bucket` implements `serde::Deserialize` in-order to parse data,
+/// and has two methods to extract data:
+/// - [`deserialize_into`] - takes ownership of the owned/heap values (via `mem::swap`)
+/// and replaces them with null-like marker values.
+/// - [`deserialize_into_clone`[ - clones the owned/heap values which allows for
+/// multiple deserializations on the same bucket.
+///
+/// [`deserialize_into`]: Bucket::deserialize_into
+/// [`deserialize_into_clone`]: Bucket::deserialize_into_clone
+///
+/// This type also implements `debug`, but the output is, well, not very good.
 pub struct Bucket<'a> {
     pub(crate) inner: Vec<BucketNode<'a>>
 }

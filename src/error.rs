@@ -1,6 +1,11 @@
 use std::error::Error;
 use std::fmt::{Debug, Display, Formatter};
 
+/// an optional error type for serde
+///
+/// useful if you don't have an error type handy!
+///
+/// Basically just a string.
 pub struct PseudoError(String);
 
 impl Error for PseudoError {}
