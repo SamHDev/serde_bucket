@@ -1,6 +1,5 @@
 use std::fmt::{Debug, Formatter};
 use std::marker::PhantomData;
-use serde::de::DeserializeOwned;
 use serde::{Deserialize, Deserializer};
 use crate::de::{BucketDeserializer, BucketVisitor};
 use crate::debug::debug_nodes;
