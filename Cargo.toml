@@ -3,9 +3,11 @@ name = "serde_bucket"
 version = "0.1.0"
 edition = "2021"
 
+description = "format analogous representation of any self-describing type with serde"
+tags = ["serde", "format", "serde-value"]
+license = "GPL-3.0-or-later"
+
 [features]
-#alloc = ["serde/alloc"]
-#default = ["alloc"]
 error = []
 
 [dependencies]
