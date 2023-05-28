@@ -1,4 +1,3 @@
-//mod _prototype;
 mod node;
 mod bucket;
 mod debug;
