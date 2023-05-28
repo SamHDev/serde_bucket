@@ -6,6 +6,9 @@ use crate::de::{BucketDeserializer, BucketVisitor};
 use crate::debug::debug_nodes;
 use crate::node::BucketNode;
 
+/// A Serde Bucket.
+///
+/// Stores Serde data model values for later deserialisation
 pub struct Bucket<'a> {
     pub(crate) inner: Vec<BucketNode<'a>>
 }
@@ -30,6 +33,11 @@ impl Debug for OwnedBucket {
 */
 
 impl<'a> Bucket<'a> {
+    /// deserialize into (clone method)
+    ///
+    /// This function deserializes into the given type, cloning owned data (Vec, String)
+    /// - `T` as `Deserialize`
+    /// - `E` as a `serde::de::Error`
     pub fn deserialize_into_clone<T: Deserialize<'a>, E: serde::de::Error>(&'a mut self) -> Result<T, E> {
         T::deserialize(&mut BucketDeserializer {
             buffer: &mut self.inner,
@@ -39,6 +47,11 @@ impl<'a> Bucket<'a> {
         })
     }
 
+    /// deserialize into (clone method)
+    ///
+    /// This function deserializes into the given type, taking/replacing owned data (Vec, String)
+    /// - `T` as `Deserialize`
+    /// - `E` as a `serde::de::Error`
     pub fn deserialize_into<T: Deserialize<'a>, E: serde::de::Error>(&'a mut self) -> Result<T, E> {
         T::deserialize(&mut BucketDeserializer {
             buffer: &mut self.inner,

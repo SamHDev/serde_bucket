@@ -1,0 +1,3 @@
+pub struct Trigger<T> {
+
+}
