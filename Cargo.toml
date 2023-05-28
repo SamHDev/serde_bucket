@@ -1,6 +1,6 @@
 [package]
 name = "serde_bucket"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 
 description = "format analogous representation of any self-describing type with serde"
@@ -13,7 +13,7 @@ repository = "https://github.com/samhdev/serde_bucket"
 error = []
 
 [dependencies]
-serde = { version = "1.0.152"}
+serde = { version = "1.0.163" }
 
 [dev-dependencies]
 serde_json = "1.0.96"
