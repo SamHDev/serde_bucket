@@ -25,6 +25,7 @@ It might be worth saying *'bucket'* and use [`serde_value`] instead.
 [`Bucket`]: https://docs.rs/serde_bucket/0.1.1/serde_bucket/struct.Bucket.html
 [`serde`]: https://serde.rs
 [`serde_value`]: https://docs.rs/serde-value/0.7.0/serde_value/
+[Serde]: https://serde.rs
 
 
 ### Example
