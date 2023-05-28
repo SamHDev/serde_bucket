@@ -7,6 +7,8 @@ description = "format analogous representation of any self-describing type with 
 tags = ["serde", "format", "serde-value"]
 license = "GPL-3.0-or-later"
 
+repository = "https://github.com/samhdev/serde_bucket"
+
 [features]
 error = []
 
