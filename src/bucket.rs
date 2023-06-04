@@ -71,6 +71,16 @@ impl<'a> Bucket<'a> {
             clone: false,
         })
     }
+
+    /// get a 'deserializer' for custom deserialization
+    pub fn deserializer<E: serde::de::Error>(&'a mut self) -> BucketDeserializer<'a, E> {
+        BucketDeserializer {
+            buffer: &mut self.inner,
+            cursor: 0,
+            error: PhantomData::<E>::default(),
+            clone: false,
+        }
+    }
 }
 
 impl<'de> Deserialize<'de> for Bucket<'de> {
