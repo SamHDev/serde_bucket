@@ -5,7 +5,7 @@ use serde::de::{DeserializeSeed, Error, MapAccess, SeqAccess, Visitor};
 use serde::{Deserializer, forward_to_deserialize_any};
 use crate::node::BucketNode;
 
-pub(crate) struct BucketDeserializer<'de, E> where E: serde::de::Error {
+pub struct BucketDeserializer<'de, E> where E: serde::de::Error {
     pub(crate) buffer: &'de mut [BucketNode<'de>],
     pub(crate) cursor: usize,
     pub(crate) error: PhantomData<E>,
@@ -140,7 +140,7 @@ impl<'x, 'de, E> MapAccess<'de> for BucketMapDeserializer<'x, 'de, E> where E: s
     }
 }
 
-pub(crate) struct BucketVisitor<'t, 'de> {
+pub struct BucketVisitor<'t, 'de> {
     pub(crate) target: &'t mut Vec<BucketNode<'de>>,
     pub(crate) owned: bool,
 }
