@@ -72,6 +72,7 @@ impl<'a> Bucket<'a> {
         })
     }
 
+    #[cfg(feature="deserializer")]
     /// get a 'deserializer' for custom deserialization
     pub fn deserializer<E: serde::de::Error>(&'a mut self) -> BucketDeserializer<'a, E> {
         BucketDeserializer {

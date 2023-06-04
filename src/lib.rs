@@ -14,3 +14,6 @@ mod error;
 
 #[cfg(feature = "error")]
 pub use error::*;
+
+#[cfg(feature="deserializer")]
+pub use de::*;

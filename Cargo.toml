@@ -4,13 +4,14 @@ version = "0.1.3"
 edition = "2021"
 
 description = "format analogous representation of any self-describing type with serde"
-tags = ["serde", "format", "serde-value"]
+keywords = ["serde", "format", "serde-value"]
 license = "GPL-3.0-or-later"
 
 repository = "https://github.com/samhdev/serde_bucket"
 
 [features]
 error = []
+deserializer = []
 
 [dependencies]
 serde = { version = "1.0.163" }
