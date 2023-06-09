@@ -1,6 +1,6 @@
 [package]
 name = "serde_bucket"
-version = "0.1.4"
+version = "0.1.5"
 edition = "2021"
 
 description = "format analogous representation of any self-describing type with serde"
